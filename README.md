@@ -7,7 +7,9 @@
 Five ready-made skills that teach your AI assistant to work like a Currence analyst.<br>
 Ask a plain question. Get an answer built on vetted data, with a link back to every source.
 
-[**Browse the skills**](#the-skills)
+[**Download all skills**](https://github.com/Currence-Engineering/mcp-skills/releases/download/latest/currence-skills-all.zip)
+&nbsp;·&nbsp;
+[Browse the skills](#the-skills)
 &nbsp;·&nbsp;
 [Connect the Currence MCP](#1-connect-the-currence-mcp)
 &nbsp;·&nbsp;
@@ -35,13 +37,13 @@ Skills make that connection useful from day one. Each one tells your assistant w
 
 ## The skills
 
-| Skill | What you get |
-|---|---|
-| [**Sector Landscape**](skills/sector-landscape/SKILL.md) | A one-page brief on any market: drivers, limiters, leading companies, the last 12 months of deals, key questions and signposts. Starts from Currence analyst research. |
-| [**Company Vetting**](skills/company-vetting/SKILL.md) | Real traction versus pitch-deck claims. Benchmarks the technology against Currence readiness scoring, checks deals, projects and contracts, compares peers and gives you the questions to ask. |
-| [**Project Credibility Check**](skills/project-credibility-check/SKILL.md) | Will it actually get built? Reads the Currence credibility score factor by factor and checks the developer's record of delivering past projects. *Needs Data Centers & Power access.* |
-| [**Weekly Signals Brief**](skills/weekly-signals-brief/SKILL.md) | What moved in your markets this week, ranked by what matters. The top three in full, the rest in a two-minute read. Schedule it for Monday morning. |
-| [**Thesis Builder**](skills/thesis-builder/SKILL.md) | A theme turned into a thesis you can defend: the drivers that must be true, evidence for and against each, the players, the capital and the whitespace. |
+| Skill | What you get | |
+|---|---|---|
+| [**Sector Landscape**](skills/sector-landscape/SKILL.md) | A one-page brief on any market: drivers, limiters, leading companies, the last 12 months of deals, key questions and signposts. Starts from Currence analyst research. | [Download](https://github.com/Currence-Engineering/mcp-skills/releases/download/latest/sector-landscape.zip) |
+| [**Company Vetting**](skills/company-vetting/SKILL.md) | Real traction versus pitch-deck claims. Benchmarks the technology against Currence readiness scoring, checks deals, projects and contracts, compares peers and gives you the questions to ask. | [Download](https://github.com/Currence-Engineering/mcp-skills/releases/download/latest/company-vetting.zip) |
+| [**Project Credibility Check**](skills/project-credibility-check/SKILL.md) | Will it actually get built? Reads the Currence credibility score factor by factor and checks the developer's record of delivering past projects. *Needs Data Centers & Power access.* | [Download](https://github.com/Currence-Engineering/mcp-skills/releases/download/latest/project-credibility-check.zip) |
+| [**Weekly Signals Brief**](skills/weekly-signals-brief/SKILL.md) | What moved in your markets this week, ranked by what matters. The top three in full, the rest in a two-minute read. Schedule it for Monday morning. | [Download](https://github.com/Currence-Engineering/mcp-skills/releases/download/latest/weekly-signals-brief.zip) |
+| [**Thesis Builder**](skills/thesis-builder/SKILL.md) | A theme turned into a thesis you can defend: the drivers that must be true, evidence for and against each, the players, the capital and the whitespace. | [Download](https://github.com/Currence-Engineering/mcp-skills/releases/download/latest/thesis-builder.zip) |
 
 ### Try them
 
@@ -67,18 +69,18 @@ Skills make that connection useful from day one. Each one tells your assistant w
 
 ### 2. Get the skills you want
 
-Each skill is a single `SKILL.md` file. Open one from the [table above](#the-skills) and click the download icon (**Download raw file**) at the top right of the file. Or copy its contents.
+Click **Download** next to any skill in the [table above](#the-skills), or grab [all five in one zip](https://github.com/Currence-Engineering/mcp-skills/releases/download/latest/currence-skills-all.zip).
 
-Pick the ones that fit your work. You don't need all five.
+Pick the ones that fit your work. You don't need all five. Downloads always give you the newest version, so come back here to pick up updates.
 
 ### 3. Add them to your assistant
 
-The quickest way: drag the `SKILL.md` into a chat, or paste its contents, and ask your assistant to save it as a skill.
-
-Or upload by hand:
+Upload the zip as it is. No need to unzip it.
 
 - **Claude:** Customize → Skills → Create New Skill → Upload a Skill
 - **ChatGPT:** Skills → New Skill → Upload from your computer
+
+Assistants take one skill per upload, so use the single-skill zips here rather than the all-in-one. Or drag a skill's `SKILL.md` into a chat and ask your assistant to save it as a skill.
 
 Then just ask. Your assistant picks the right skill from your question.
 
