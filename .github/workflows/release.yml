@@ -1,8 +1,13 @@
 name: Release skills
 
+# Version tags (v*) cut a fixed release. Pushes to main that touch skills/
+# refresh the rolling "latest" release in place.
 on:
   push:
     tags: ["v*"]
+    branches: [main]
+    paths: ["skills/**"]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -10,6 +15,8 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
 
@@ -23,7 +30,16 @@ jobs:
           done
           zip -r ../dist/currence-skills-all.zip . -x '*.DS_Store'
 
-      - name: Publish release
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" dist/*.zip --title "$GITHUB_REF_NAME" --generate-notes
+      - name: Publish versioned release
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: gh release create "$GITHUB_REF_NAME" dist/*.zip --title "$GITHUB_REF_NAME" --generate-notes --latest=false
+
+      - name: Update rolling latest release
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git tag -f latest
+          git push -f origin latest
+          if ! gh release view latest >/dev/null 2>&1; then
+            gh release create latest --title "Latest" --notes "Rolling build of the skills on main. Updated on every change."
+          fi
+          gh release upload latest dist/*.zip --clobber
